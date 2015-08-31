@@ -37,6 +37,15 @@ module Methods2
 		end
 		return 0
 	end
+
+	def in_order?(a, b, c, bOk)
+		if b > a && c > b && !bOk
+			return true
+		elsif bOk && c > b
+			return true
+		end
+		return false
+	end
 				
 	# TODO - write in_order?
 
