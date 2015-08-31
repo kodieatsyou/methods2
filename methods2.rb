@@ -17,11 +17,27 @@ module Methods2
 	end
 
 	# TODO - write successful_squirrel_party?
-	def squirrel_party?(n,w);
-		if(w = 0 && n >=40 && n <= 60)
-			return 1
+	def squirrel_party?(n,weekend)
+		if !weekend && n >= 40 && n <= 60
+			return true
+		elsif weekend && n >= 40
+			return true
+		end
+		return false
+	end
 	# TODO - write ticket
-
+	def ticket?(a, b, c)
+		ab = a + b
+		bc = b + c
+		ac = a + c
+		if ab == 10 || bc == 10 || ac == 10
+			return 10
+		elsif  ab == bc + 10 || ab == ac + 10
+			return 5
+		end
+		return 0
+	end
+				
 	# TODO - write in_order?
 
 	# TODO - write less_by_ten?
